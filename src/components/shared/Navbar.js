@@ -27,7 +27,7 @@ const navItems = [
   },
   {
     route: "Category",
-    pathname: "/category",
+    pathname: "/categories/news?category=all-news",
   },
 
   {
@@ -48,7 +48,7 @@ function Navbar() {
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             {/* Image */}
-            <Box className="w-full">
+            <Box className="w-full text-center">
               {navItems.map((item) => (
                 <Link key={item} href={item.pathname} className="text-white">
                   <Button className="text-white">{item.route}</Button>
