@@ -11,6 +11,8 @@ import { IconButton, Stack } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import Link from "next/link";
 import Header from "./Header";
+import Image from "next/image";
+import logo from "@/assets/logo.png";
 
 const navItems = [
   {
@@ -44,10 +46,10 @@ function Navbar() {
   return (
     <>
       <Header />
-      <AppBar position="static" className="bg-black">
+      <AppBar position="static" className="!bg-black">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            {/* Image */}
+            <Image src={logo} width={100} height={100} alt="logo" />
             <Box className="w-full text-center">
               {navItems.map((item) => (
                 <Link key={item} href={item.pathname} className="text-white">
